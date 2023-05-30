@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabs demo</title>
+        <style>
+            body {
+                padding: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: lightgray;
+            }
+            .mytabs {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 500px;
+                margin: 50px auto;
+            }
+            .mytabs input[type="radio"] {
+                display:  none;
+            }
+            .mytabs label {
+                padding: 25px;
+                background-color: gray;
+                font-weight: bold;
+            }
+            .mytabs input[type="radio"]:checked + label {
+                background-color: white;
+            }
+            .mytabs .tab {
+                width: 100%;
+                padding: 20px;
+                background: #fff;
+                order: 1;
+                display: none;
+             }
+            .mytabs input[type="radio"]:checked + label + .tab {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mytabs">
+            <input type="radio" name="myradio" id="tabfree" checked="checked">
+            <label for="tabfree">Free</label>
+            <div class="tab">
+                <h2>Free</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <input type="radio" name="myradio" id="tabsilver">
+            <label for="tabsilver">Silver</label>
+            <div class="tab">
+                <h2>Silver</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <input type="radio" name="myradio" id="tabglod">
+            <label for="tabglod">Gold</label>
+            <div class="tab">
+                <h2>Gold</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+        </div>
+    </body>
+</html>
